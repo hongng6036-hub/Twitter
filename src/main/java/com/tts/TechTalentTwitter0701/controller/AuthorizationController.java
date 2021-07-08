@@ -17,6 +17,11 @@ public class AuthorizationController {
         this.userService = userService;
     }
 
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
     @GetMapping("/signup")
     public String registration(Model model) {
         User user = new User();
@@ -52,8 +57,5 @@ public class AuthorizationController {
 //        return "login";
 //    }
 
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
+
 }
